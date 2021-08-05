@@ -221,6 +221,7 @@ namespace NetCasbin.Util
                 if (!string.IsNullOrEmpty(domain))
                 {
                     result = roleManager.HasLink(subject1, subject2, domain);
+                    Console.WriteLine($"GFunction: {subject1}, {subject2}, {domain}, {result}");
                     resultCache[cacheKey] = result;
                     return result;
                 }
